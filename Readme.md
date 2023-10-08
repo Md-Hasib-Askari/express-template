@@ -16,7 +16,8 @@ Modules attached:
 11. "mongoose": "^7.5.1",
 12. "multer": "^1.4.5-lts.1",
 13. "mysql": "^2.18.1",
-14. "validator": "^13.11.0",
-15. "xss-clean": "^0.1.4"
+14. "nodemon": "^3.0.1",
+15. "validator": "^13.11.0",
+16. "xss-clean": "^0.1.4"
 
 All the necessary modules are attached, you can adjust as per your need and install them.

@@ -13,7 +13,6 @@ const demoMiddleware = require('./src/Middlewares/demo');
 
 // Middlewares
 app.use(cors());
-app.use(cors());
 app.use(helmet());
 app.use(hpp({checkBody: true, checkQuery: true}));
 app.use(xssClean());

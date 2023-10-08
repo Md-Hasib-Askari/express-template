@@ -3,10 +3,21 @@
 */
 
 const router = require('express').Router();
+const ModelController = require("../controllers/ModelController");
 
-const Controller = require('../Controllers/Controller');
+// Create
+router.post("/create", ModelController.CreateTest);
 
-// Home Route
-router.get('/', Controller.home);
+// Read
+router.get("/read", ModelController.ReadTest);
+router.get("/read/:id", ModelController.ReadTestByID);
 
-module.exports = router;
+// Update
+router.post("/update/:id", ModelController.UpdateTest);
+
+// Delete
+router.get("/delete/:id", ModelController.DeleteTest);
+
+
+
+module.exports=router;
