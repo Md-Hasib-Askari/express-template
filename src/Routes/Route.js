@@ -3,20 +3,20 @@
 */
 
 const router = require('express').Router();
-const ModelController = require("../controllers/ModelController");
+const StudentController = require("../Controllers/StudentController");
 
 // Create
-router.post("/create", ModelController.CreateTest);
+router.post("/addStudent", StudentController.register);
 
 // Read
-router.get("/read", ModelController.ReadTest);
-router.get("/read/:id", ModelController.ReadTestByID);
+router.get("/allStudents", StudentController.getStudents);
+router.get("/allStudents/:id", StudentController.getStudentByID);
 
 // Update
-router.post("/update/:id", ModelController.UpdateTest);
+router.post("/addStudent/:id", StudentController.updateStudent);
 
 // Delete
-router.get("/delete/:id", ModelController.DeleteTest);
+router.get("/deleteStudent/:id", StudentController.deleteStudent);
 
 
 
