@@ -5,8 +5,8 @@ require('dotenv').config({
     path: './config.env'
 });
 
-const app = require('./app');
+const initializeApp = require('./app');
 
-app.listen(process.env.RUNNING_PORT, () => {
+initializeApp.listen(process.env.RUNNING_PORT, () => {
     console.log(`Server running @ http://localhost:${process.env.RUNNING_PORT}`)
 });

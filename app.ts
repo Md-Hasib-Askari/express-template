@@ -8,7 +8,7 @@ const helmet = require('helmet');
 const hpp = require('hpp');
 const xssClean = require('xss-clean');
 
-const router = require('./src/Routes/Route');
+const apiRouter = require('./src/Routes/Route');
 const demoMiddleware = require('./src/Middlewares/demo');
 
 // Middlewares
@@ -17,6 +17,6 @@ app.use(helmet());
 app.use(hpp({checkBody: true, checkQuery: true}));
 app.use(xssClean());
 
-app.all('/', router, demoMiddleware.showMiddleware);
+app.all('/', apiRouter, demoMiddleware.showMiddleware);
 
 module.exports = app;

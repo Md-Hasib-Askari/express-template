@@ -1,7 +1,8 @@
+import {Request, Response} from 'express';
 const testModel = require('../Models/Models');
 
 // Create
-exports.CreateTest = async (req, res) => {
+exports.CreateTest = async (req: Request, res: Response) => {
     try {
         const reqBody = req.body;
         await testModel.create(reqBody);
@@ -12,7 +13,7 @@ exports.CreateTest = async (req, res) => {
 }
 
 // Read
-exports.ReadTest = async (req,res) => {
+exports.ReadTest = async (req: Request,res: Response) => {
     try {
         let data = await testModel.find();
         res.status(200).json({status:"success", data:data})
@@ -22,7 +23,7 @@ exports.ReadTest = async (req,res) => {
 }
 
 // Read By ID
-exports.ReadTestByID = async (req,res) => {
+exports.ReadTestByID = async (req: Request,res: Response) => {
     let id = req.params.id;
     let query = {_id:id};
     try {
@@ -35,7 +36,7 @@ exports.ReadTestByID = async (req,res) => {
 
 
 // Update
-exports.UpdateTest = async (req,res) => {
+exports.UpdateTest = async (req: Request,res: Response) => {
     let id= req.params.id;
     let query={_id:id};
     let reqBody = req.body;
@@ -49,7 +50,7 @@ exports.UpdateTest = async (req,res) => {
 
 
 // Delete
-exports.DeleteTest = async (req,res) => {
+exports.DeleteTest = async (req: Request,res: Response) => {
     let id= req.params.id;
     let query={_id:id};
     try {
