@@ -14,7 +14,6 @@
   "dependencies": {
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.3",
-    "@types/mongoose": "^5.11.97",
     "@types/node": "^24.1.0",
     "body-parser": "^2.2.0",
     "cookie-parser": "^1.4.6",
@@ -30,8 +29,7 @@
     "multer": "^2.0.2",
     "mysql": "^2.18.1",
     "ts-node": "^10.9.2",
-    "validator": "^13.11.0",
-    "xss-clean": "^0.1.4"
+    "validator": "^13.11.0"
   },
   "devDependencies": {
     "concurrently": "^9.2.0",
